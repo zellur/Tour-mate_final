@@ -38,6 +38,14 @@ public class EventActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+                double budget = events.get(position).getEventBudget();
+                String tourName=events.get(position).getEventName();
+
+                Intent intent = new Intent(EventActivity.this,TourDeatail.class);
+                intent.putExtra("budget",budget);
+                intent.putExtra("name",tourName);
+                startActivity(intent);
+
             }
         });
 
