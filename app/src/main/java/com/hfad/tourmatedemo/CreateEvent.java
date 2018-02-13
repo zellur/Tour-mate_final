@@ -63,7 +63,7 @@ public class CreateEvent extends AppCompatActivity {
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
         String createDate = dateFormat.format(new Date()).toString();
 
-        if(Name!=null&&startDate!=null&&destination!=null&&startLocation!=null){
+        if(Name!=null&&startDate!=null&&destination!=null&&startLocation!=null && budget>0.0){
 
             String id = databaseEvent.push().getKey();
 

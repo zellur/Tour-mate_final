@@ -40,10 +40,12 @@ public class EventActivity extends AppCompatActivity {
 
                 double budget = events.get(position).getEventBudget();
                 String tourName=events.get(position).getEventName();
+                String idd = events.get(position).getId();
 
                 Intent intent = new Intent(EventActivity.this,TourDeatail.class);
                 intent.putExtra("budget",budget);
                 intent.putExtra("name",tourName);
+                intent.putExtra("id",idd);
                 startActivity(intent);
 
             }
